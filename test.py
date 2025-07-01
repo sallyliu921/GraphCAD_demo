@@ -1,4 +1,9 @@
 # -*- coding: UTF-8 -*-
+import sys
+import os
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'lib'))
+
 from init import *
 from LoadData import LoadData, restore_curve
 from model import *
@@ -90,9 +95,7 @@ def main():
     graph_num = len(all_data)
     print("Dataset Num:", graph_num)
 
-    # train_data, eval_data, test_data = split_data(all_data, graph_num)
     test_dataset = GraphDataset(all_data, use_composable=False, shuffle=False)    
-
     num_workers = 4
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers, collate_fn=hetero_collate_fn)
     
