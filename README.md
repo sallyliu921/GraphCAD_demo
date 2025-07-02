@@ -19,7 +19,7 @@ If you use this work, please cite:
 
 ## Repository Structure
 
-- `benchmark/`: Contains test datasets with various cases (e.g., or1200, yacc, SmallBoom, sparc, tv80, oc8051, vga_lcd, arm9, fpu).
+- `benchmark/`: Contains a simple test dataset with cases such as or1200, yacc, SmallBoom, sparc, tv80, oc8051, vga_lcd, arm9, and fpu. The complete dataset is available [here](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155204969_link_cuhk_edu_hk/EvnpEqSLtlhOnsmnMNHo5psBkTUeuCi7jhpBW0n0wXHwdw?e=lTqYoO); further details are provided in the "Dataset Description" section.
 - `.pt`: Pretrained model file.
 - `.so`: Required shared libraries for testing.
 - `test.py`: Testing script.
